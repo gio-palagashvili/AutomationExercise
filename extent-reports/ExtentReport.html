@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extent Report</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background:#1e1e2e;color:#cdd6f4;min-height:100vh;padding:20px}
+.container{max-width:1200px;margin:0 auto}
+.header{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #45475a}
+.header h1{font-size:1.75rem;font-weight:600;color:#f5c2e7}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#313244;border-radius:8px;padding:16px;text-align:center}
+.card.pass{border-left:4px solid #a6e3a1}
+.card.total{border-left:4px solid #89b4fa}
+.card .num{font-size:1.5rem;font-weight:700}
+.card.pass .num{color:#a6e3a1}
+.card .label{font-size:0.75rem;color:#a6adc8;margin-top:4px}
+table{width:100%;border-collapse:collapse;background:#313244;border-radius:8px;overflow:hidden}
+th,td{padding:12px 16px;text-align:left}
+th{background:#45475a;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#a6adc8}
+tr:nth-child(even){background:#363648}
+tr:hover{background:#43435a}
+.status{display:inline-block;padding:4px 10px;border-radius:6px;font-size:0.8rem;font-weight:500}
+.status.pass{background:rgba(166,227,161,0.2);color:#a6e3a1}
+.duration{color:#a6adc8;font-size:0.9rem}
+.test-name{font-weight:500}
+.category{font-size:0.8rem;color:#89b4fa;margin-top:2px}
+.footer{margin-top:24px;padding-top:16px;border-top:1px solid #45475a;font-size:0.85rem;color:#6c7086}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Extent Report</h1>
+    <p style="margin-top:8px;color:#a6adc8">Test run completed at 2025-02-13 23:54:10</p>
+  </div>
+  <div class="summary">
+    <div class="card total"><div class="num">11</div><div class="label">Total</div></div>
+    <div class="card pass"><div class="num">11</div><div class="label">Passed</div></div>
+    <div class="card"><div class="num">0</div><div class="label">Failed</div></div>
+    <div class="card"><div class="num">0</div><div class="label">Skipped</div></div>
+    <div class="card"><div class="num">28.9s</div><div class="label">Duration</div></div>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Status</th><th>Test</th><th>Category</th><th>Duration</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_that_home_page_is_visible_successfully</div><div class="category">RegisterUserTest</div></td><td>Auth</td><td class="duration">3.5s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_New_User_Signup_is_visible</div><div class="category">RegisterUserTest</div></td><td>Auth</td><td class="duration">3.6s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_that_Enter_Account_Information_is_visible</div><div class="category">RegisterUserTest</div></td><td>Auth</td><td class="duration">4.2s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_that_Account_Created_is_visible</div><div class="category">RegisterUserTest</div></td><td>Auth</td><td class="duration">6.6s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Login_User_with_correct_email_and_password</div><div class="category">LoginUserTest</div></td><td>Auth</td><td class="duration">3.5s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Login_User_with_Incorrect_email_and_password</div><div class="category">LoginUserTest</div></td><td>Auth</td><td class="duration">3.3s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Logout_User</div><div class="category">LoginUserTest</div></td><td>Auth</td><td class="duration">3.8s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Register_User_with_existing_email</div><div class="category">LoginUserTest</div></td><td>—</td><td class="duration">3.3s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">ContactUsForm</div><div class="category">ContactUsFormTest</div></td><td>Contact</td><td class="duration">4.5s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_user_is_navigated_to_ALL_PRODUCTS_page_successfully</div><div class="category">ProductsTest</div></td><td>Catalog</td><td class="duration">3.3s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_that_Product_detail_Is_visible</div><div class="category">ProductsTest</div></td><td>Catalog</td><td class="duration">3.4s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_Searched_Products_is_visible</div><div class="category">SearchProductTest</div></td><td>Catalog</td><td class="duration">3.5s</td></tr>
+      <tr><td><span class="status pass">PASS</span></td><td><div class="test-name">Verify_Subscription_in_home_page</div><div class="category">VerifySubscriptionTest</div></td><td>Newsletter</td><td class="duration">3.2s</td></tr>
+    </tbody>
+  </table>
+  <div class="footer">
+    Generated by Extent Reports. Suite: All Test Suite · Platform: Web
+  </div>
+</div>
+</body>
+</html>
